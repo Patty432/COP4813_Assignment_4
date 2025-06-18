@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nested Menu Navigation Webpage</title>
+
+        <style>
+            .subject {
+                background-color: green;
+                color: white;
+                padding: 10px;
+                width: 50px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            .topic {
+                display: none;
+                padding: 10px 20px;
+                margin-bottom: 10px;
+                border-radius: 0 0 5px 5px;
+            }
+
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Nested Menu Navigation Webpage</h1>
+
+        <div class="subject" onclick="toggleTopics('math-topics')">Math</div>
+        <ul id="math-topics" class="topic">
+            <li><a href="../math/algebra.html">Algebra</a></li>
+            <li><a href="../math/geometry.html">Geometry</a></li>
+            <li><a href="../math/pre_calculus.html">Pre-Calculus</a></li>
+            <li><a href="../math/calculus.html">Calculus</a></li>
+        </ul>
+        <div class="subject" onclick="toggleTopics('biology-topics')">Biology</div>
+        <ul id="biology-topics" class="topic">
+            <li><a href="../biology/cell_respiratory.html">Cellular Respiration</a></li>
+            <li><a href="../biology/animal_kingdom.html">The Animal Kigndom</a></li>
+            <li><a href="../biology/respiratory.html">Respiratory System</a></li>
+            <li><a href="../biology/circulatory.html">Circulatory System</a></li>
+        </ul>
+        <div class="subject" onclick="toggleTopics('history-topics')">History</div>
+        <ul id="history-topics" class="topic">
+            <li><a href="../history/ww1.html">World War 1</a></li>
+            <li><a href="../history/ww2.html">World War 2</a></li>
+            <li><a href="../history/us_independence.html">U.S. Independence</a></li>
+            <li><a href="../history/asian_culture.html">Asian Culture</a></li>
+        </ul>
+
+        <script>
+            function toggleTopics(id) {
+                const topics = document.getElementById(id);
+                topics.style.display = (topics.style.display === "block") ? "none" : "block";
+            }
+        </script>
+    </body>
+</html>
